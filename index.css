@@ -9,7 +9,7 @@ body {
 	font-family: 'Lora';
 }
 
-.container {
+.main-container {
   height: 100vh;
   height: 100svh;
   width: 100vw;
@@ -28,8 +28,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  flex-grow: 1;
-  flex: 0 0 calc(50% - 4rem);
+  flex-basis: calc(50% - 4rem);
+}
+
+.text-container {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: justify;
 }
 
 header * {
@@ -88,3 +96,36 @@ header * {
     cursor: pointer;
     appearance: none;
 }
+
+.orientation-warning {
+    opacity: 0;
+    border: none;
+	inset: 1rem 2rem auto;
+	background-color: #eee4e4;
+	color: #770064;
+    transition: opacity 0.3s ease-in;
+}
+
+.orientation-warning > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.orientation-warning button {
+	padding: 0.3rem;
+	border: none;
+	background-color: #FFB300;
+	border-radius: 0;
+	color: inherit;
+	cursor: pointer;
+	appearance: none;
+}
+
+@media(orientation: portrait) {
+  .orientation-warning {
+    opacity: 1;
+  }
+}
+
