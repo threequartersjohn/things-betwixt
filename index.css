@@ -33,6 +33,7 @@ body {
 
 .text-container {
   flex: 1;
+  padding: 5rem;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -101,7 +102,7 @@ header * {
     opacity: 0;
     border: none;
 	inset: 1rem 2rem auto;
-	background-color: #eee4e4;
+	background-color: white;
 	color: #770064;
     transition: opacity 0.3s ease-in;
 }
