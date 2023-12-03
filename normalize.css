@@ -15,6 +15,7 @@ html {
    1. Stretch <html> stretch to fill our screen height
    2. Make children of html (body) occupy at least 100% of the screen
    3. Viewport is scalable and occupies at least 320px (iPhone SE)
+   3. Disable all overscroll behavior
 */
 
 html {
@@ -22,6 +23,7 @@ html {
   min-height: 100%; /* 1 */
   display: flex; /* 2 */
   flex-direction: column; /* 2 */
+  overscroll-behavior: none; /* 4 */
 }
 
 /* remove body margin  */

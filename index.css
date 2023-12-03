@@ -5,8 +5,13 @@
 	src: url('./public/fonts/lora-variable.ttf');
 }
 
+* {
+    touch-action: manipulation;
+}
+
 body {
 	font-family: 'Lora';
+    background-color: black;
 }
 
 .main-container {
@@ -18,7 +23,6 @@ body {
   justify-content: space-between;
   color: white;
   overflow: scroll;
-  background-color: black;
   padding: 4rem 2rem;
 }
 
@@ -39,6 +43,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   text-align: justify;
+  overflow: scroll;
 }
 
 header * {
@@ -101,17 +106,19 @@ header * {
 .orientation-warning {
     opacity: 0;
     border: none;
-	inset: 1rem 2rem auto;
+	top: 0;
+    margin: 1rem;
 	background-color: white;
 	color: #770064;
     transition: opacity 0.3s ease-in;
 }
 
-.orientation-warning > .container {
+.orientation-warning .container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 1rem;
+  text-align: justify;
 }
 
 .orientation-warning button {
@@ -130,3 +137,10 @@ header * {
   }
 }
 
+@media only screen and (max-device-width: 768px){
+    .text-container {
+        padding: 0rem;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+      }
+}
